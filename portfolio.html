@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashish Tikwani - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-gray-800">KT</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-purple-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-purple-600 transition-colors">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-purple-600 transition-colors">Projects</a>
+                    <a href="#skills" class="text-gray-600 hover:text-purple-600 transition-colors">Skills</a>
+                    <a href="#contact" class="text-gray-600 hover:text-purple-600 transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#home" class="block py-2 text-gray-600 hover:text-purple-600">Home</a>
+                <a href="#about" class="block py-2 text-gray-600 hover:text-purple-600">About</a>
+                <a href="#projects" class="block py-2 text-gray-600 hover:text-purple-600">Projects</a>
+                <a href="#skills" class="block py-2 text-gray-600 hover:text-purple-600">Skills</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-purple-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-full flex items-center justify-center text-white pt-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+            <div class="fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Kashish Tilwani</h1>
+                <p class="text-xl md:text-2xl mb-8 text-purple-100">Passionate about AI Innovation</p>
+                <p class="text-lg mb-10 text-purple-50 max-w-2xl mx-auto">
+                    Explore my journey in AI, from innovative projects to cutting-edge skills. Let's build the future together!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-50 transition-colors">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
+                        <div class="text-8xl">👨‍💻</div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Get to know my story and qualifications.</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I'm Kashish Tilwani, a detail-oriented B.Tech (Artificial Intelligence) student at Delhi Skill and Entrepreneurship University (DSEU), expected to graduate in 2028. I'm passionate about leveraging AI and technology to solve real-world problems, from data analysis to innovative applications.
+                        With strong skills in Python and data handling, I thrive in collaborative environments and enjoy tackling challenges with a positive, resilient mindset. My goal is to contribute to dynamic organizations by driving efficiency through tech innovation. 
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        When I'm not coding, you can find me exploring new technologies, contributing to open-source 
+                        projects, or enjoying a good cup of coffee while sketching out new ideas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="fade-in text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Education & Certifications</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    My educational background and professional certifications that fuel my expertise.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Education -->
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold mb-8 text-center">Education</h3>
+                    <div class="relative">
+                        <!-- Timeline line -->
+                        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+
+                        <!-- Education items -->
+                        <div class="relative mb-8">
+                            <div class="flex items-start">
+                                <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg z-10">
+                                    UG
+                                </div>
+                                <div class="ml-6 bg-white p-6 rounded-lg shadow-md flex-1">
+                                    <h4 class="text-xl font-semibold mb-2">Bachelor of Technology in Artificial Intelligence</h4>
+                                    <p class="text-blue-600 font-medium mb-2">DSEU</p>
+                                    <p class="text-gray-500 text-sm mb-3">2024 - 2028</p>
+                                    <p class="text-gray-600">Specialized in Artificial Intelligence and Machine Learning.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="relative mb-8">
+                            <div class="flex items-start">
+                                <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg z-10">
+                                    SS
+                                </div>
+                                <div class="ml-6 bg-white p-6 rounded-lg shadow-md flex-1">
+                                    <h4 class="text-xl font-semibold mb-2">Senior Secondary (Class XII)</h4>
+                                    <p class="text-green-600 font-medium mb-2">CBSE – Aadharshila Vidyapeeth</p>
+                                    <p class="text-gray-500 text-sm mb-3">2023 - 2024</p>
+                                    <p class="text-gray-600">Focus on basics of science feild i.e, Physics, Chemistry & Maths</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative mb-8">
+                            <div class="flex items-start">
+                                <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg z-10">
+                                    JS
+                                </div>
+                                <div class="ml-6 bg-white p-6 rounded-lg shadow-md flex-1">
+                                    <h4 class="text-xl font-semibold mb-2">Secondary (Class X)</h4>
+                                    <p class="text-green-600 font-medium mb-2">CBSE – Aadharshila Vidyapeeth</p>
+                                    <p class="text-gray-500 text-sm mb-3">2021 - 2022</p>
+                                    <p class="text-gray-600">Focus on Foundation of each carrer.</p>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold mb-8 text-center">Certifications</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-semibold mb-2">AWS Certified In GEN AI</h4>
+                                    <p class="text-orange-600 font-medium mb-2">Google</p>
+                                    <p class="text-gray-600 text-sm">Completed foundational course on GEN AI concepts on Google Cloud console.</p>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-semibold mb-2">Excel & Power BI</h4>
+                                    <p class="text-blue-600 font-medium mb-2">my greatlearning & Dell</p>
+                                    <p class="text-gray-600 text-sm">Earned the expertize in data manipulation and visualisation.</p>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-semibold mb-2">Data science & analytics</h4>
+                                    <p class="text-blue-500 font-medium mb-2">HP</p>
+                                    <p class="text-gray-600 text-sm">Certified in data science & analytics Practices, methodologies & tools.</p>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-semibold mb-2">AWS Artificial Intelligence Practitioner Learning Plan</h4>
+                                    <p class="text-green-600 font-medium mb-2">Amazon Web Services (AWS)</p>
+                                    <p class="text-gray-500 text-sm mb-3">Issued: June 2022</p>
+                                    <p class="text-gray-600 text-sm">Professional-level certification demonstrating expertise in Artificial Intelligence on AWS.</p>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Here are some of my recent projects that showcase my skills and passion for creating amazing digital experiences.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <div class="text-6xl">🛍</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Vikreta Mart</h3>
+                        <p class="text-gray-600 mb-4">
+                            A full-stack e-commerce solution
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
+                                <a href = "https://vikretamart.vercel.app/"> Live Demo </a>
+                            </button>
+                            <button class="flex-1 border border-purple-600 text-purple-600 py-2 px-4 rounded-lg hover:bg-purple-50 transition-colors">
+                                <a href = "https://github.com/Kashish-Dseu/VIKRETAMART.github.io"> View Code </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <div class="text-6xl">📱</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">TruScan</h3>
+                        <p class="text-gray-600 mb-4">
+                            A NLP based Rumour's classification 
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Vue.js</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Firebase</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Socket.io</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
+                                <a href = "https://truscan-mgtylqruc59s6azm9pqwch.streamlit.app/"> Live Demo </a>
+                            </button>
+                            <button class="flex-1 border border-purple-600 text-purple-600 py-2 px-4 rounded-lg hover:bg-purple-50 transition-colors">
+                                <a href = "https://github.com/Kashish-Dseu/TruScan"> View Code </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Skills & Technologies</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    I'm constantly learning and improving my skills. Here are the technologies I work with regularly.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-8 text-gray-800">Programming Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">HTML/CSS</span>
+                                <span class="text-purple-600 font-medium">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">PYTHON</span>
+                                <span class="text-purple-600 font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">MYSQL</span>
+                                <span class="text-purple-600 font-medium">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-8 text-gray-800">Soft Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">Teamwork</span>
+                                <span class="text-purple-600 font-medium">82%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">disciplined/Punctual</span>
+                                <span class="text-purple-600 font-medium">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">Quick Learner</span>
+                                <span class="text-purple-600 font-medium">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    I'm always interested in new opportunities and exciting projects. Let's discuss how we can work together!
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-purple-600 text-xl">📧</span>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-800">Email</div>
+                                <div class="text-gray-600">kashish@example.com</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-purple-600 text-xl">📱</span>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-800">Phone</div>
+                                <div class="text-gray-600">+91 8882315364</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-purple-600 text-xl">📍</span>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-800">Location</div>
+                                <div class="text-gray-600">Shalimar Bagh, New Delhi, India</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <button class="w-10 h-10 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors">
+                                <a href="https://www.linkedin.com/in/kashish-tilwani-40a5672a8" span class="text-sm">in</span></a>
+                            </button>
+                            <button class="w-10 h-10 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors">
+                                <a href="https://github.com/Kashish-Dseu"> <span class="text-sm">GH</span> </a>
+                            </button>
+                        </div>
+                    </div>
+              </div>
+          </section>
+      </body>
+</html>                            
